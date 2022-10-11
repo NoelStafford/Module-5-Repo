@@ -81,7 +81,7 @@ text-decoration: underline;
 span {
 font-weight: bold;
 }
-
+/* clear schedule button */
 #clearPlanner {
 margin: 20px auto;
 padding: 5px;

@@ -1,3 +1,4 @@
+// date and time using moment
 $(document).ready(function() {
     var formattedCurrentDayName = moment().format('dddd')
     var formattedCurrentDay = moment().format('MMM Do YYYY, h:mm a');
@@ -6,7 +7,7 @@ $(document).ready(function() {
     $('#currentDate').text(formattedCurrentDay);
     
     
-    
+    // Time of the day loop 
     for (let i = 0; i < $('.textInput').length; i++) {
     if ($('.textInput').eq(i).data('value') > formattedHour) {
     ($('.textInput')).eq(i).addClass('future')
@@ -20,7 +21,7 @@ $(document).ready(function() {
     }
     
     
-    
+    // save button on right side of time slot
     $('.saveBtn').click(function () {
     var time = $(this).attr('id');
     var value = $(this).siblings('.textInput').val();
@@ -40,7 +41,7 @@ $(document).ready(function() {
     $('.textInput16').val(localStorage.getItem("16"));
     $('.textInput17').val(localStorage.getItem("17"));
     
-    
+    // clear planner function
     $('#clearPlanner').click(function () {
     localStorage.clear();
     location.reload();
